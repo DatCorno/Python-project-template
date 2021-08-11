@@ -14,6 +14,13 @@ def lint(c):
 
 
 @task
+def build(c, image="base"):
+    """Build the given Docker image."""
+    c.run(f"docker build -t {image}-image")
+
+
+@task
 def test(c):
     """Run the test suite."""
-    pass
+    build(c, "test")
+    c.run("docker run -t test-image")
