@@ -11,6 +11,7 @@ def lint(c):
     c.run("docker pull github/super-linter:latest")
     current_wd = os.getcwd()
     c.run(f"docker run -e RUN_LOCAL=true -v {current_wd}:/tmp/lint github/super-linter")
+    c.run("mypy --strict")
 
 
 @task
