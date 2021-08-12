@@ -2,3 +2,4 @@ invoke
 black
 mypy
 pip-tools
+sphinx
