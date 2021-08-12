@@ -32,7 +32,10 @@ Python 3.5 have allowed us to ensure that our code works on another level by pro
 While a lot of projects have to still to provide public type hints for their APIs, some already do
 or have internal typing that we can query (Pytest for example.)
 
-
+## Pip-tools
+Pip-tools provides the utility `pip-compile` which allows us to declare project dependencies in
+`*.in` files and turn them into `*requirements.txt` files. This has the effect of freezing the
+versions of our dependencies so we have a more reliable and reproductible development environment.
 
 
 
